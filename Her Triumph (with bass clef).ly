@@ -188,9 +188,9 @@ wordsA = \lyricmode {
 
 wordsB = \lyricmode {
   \set stanza = \markup{\right-align "2."}
-  "" Cru -- ci -- fied in sor -- row great, His truths are posed as crimes of hate. When His com -- mand -- ments none will teach, His blood can -- not His mem -- bers reach. Dis --
+  "" Cru -- ci ____ -- fied__in sor -- row great, His truths are posed as crimes of hate. When His com -- mand -- ments none will teach, His blood can -- not His mem -- bers reach. Dis --
   fig -- ured and of beau -- ty reft, He sees be -- low a rem -- nent left.
-  And in His gasp -- ing pleas ____ He entrusts you, faith -- ful Mo -- ther to__these.
+  And in His gasp -- ing pleas ____ He entrusts you, faith -- ful Mo -- ther__to these.
 }
 
 wordsC = \lyricmode {
