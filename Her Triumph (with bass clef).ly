@@ -18,7 +18,10 @@
   }
   composer = \markup {
     \with-url #"http://benedictinesofmary.org"
-    {Benedictines of Mary, Queen of Apostles}
+    \column{
+	\line{Benedictines of Mary, Queen of Apostles}
+	\line{\small{http://benedictinesofmary.org}}
+    }
   }
   tagline = \markup {
     Engraved on
