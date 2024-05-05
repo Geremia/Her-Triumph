@@ -1,6 +1,6 @@
 % A.M.D.G.
 
-\version "2.18.2"
+\version "2.24.0"
 \language "english"
 
 #(set-default-paper-size "letter")
@@ -13,20 +13,20 @@
   dedication = "Our Blessed Virgin Mother"
   %subsubtitle = "Composed Lent 2016"
   title = \markup {
-    \with-url #"https://music.benedictinesofmary.org/node/19"
+    \with-url "https://www.cpdl.org/wiki/index.php/Her_Triumph_(Anonymous)"
     {Her Triumph}
   }
   composer = \markup {
-    \with-url #"http://benedictinesofmary.org"
+    \with-url "https://benedictinesofmary.org/"
     \column{
 	\line{Benedictines of Mary, Queen of Apostles}
-	\line{\small{http://benedictinesofmary.org}}
+	\line{\small{BenedictinesOfMary.org}}
     }
   }
   tagline = \markup {
     Engraved on
     \simple #(strftime "%Y-%m-%d" (localtime (current-time)))
-    with \with-url #"http://lilypond.org/"
+    with \with-url "http://lilypond.org/"
     \line { LilyPond \simple #(lilypond-version) (http://lilypond.org/) }
   }
 }
@@ -34,14 +34,14 @@
 %parenthesizing a group of notes
 %http://lsr.di.unimi.it/LSR/Snippet?id=902
 startParenthesis = {
-  \override ParenthesesItem.font-size = #1
-  \once \override ParenthesesItem.stencils = #(lambda (grob)
-                                                (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
+  \override Parentheses.font-size = #1
+  \once \override Parentheses.stencils = #(lambda (grob)
+                                                (let ((par-list (parentheses-interface::calc-parenthesis-stencils grob)))
                                                   (list (car par-list) point-stencil )))
 }
 endParenthesis = {
-  \once \override ParenthesesItem.stencils = #(lambda (grob)
-                                                (let ((par-list (parentheses-item::calc-parenthesis-stencils grob)))
+  \once \override Parentheses.stencils = #(lambda (grob)
+                                                (let ((par-list (parentheses-interface::calc-parenthesis-stencils grob)))
                                                   (list point-stencil (cadr par-list))))
 }
 
@@ -97,7 +97,7 @@ upper =	 \relative c'' {
   d4 (c) \bar "||"
   
   % final stanza
-  \break \mark \markup { \musicglyph #"scripts.segno" }
+  \break \mark \markup { \musicglyph "scripts.segno" }
   \once \omit Staff.TimeSignature
   \time 2/4
   g'4 bf8 [c]
@@ -182,7 +182,7 @@ wordsA = \lyricmode {
   The crowds that waved palms now de -- ride. He is by Pe -- ter thrice de --
   nied. And faith -- less the a -- po -- stles flee. God ru -- ined, who could stay to see? The
   pas -- sion of the Church be -- gun, His bo -- dy Mys -- tic set up -- on,
-  de -- filed by ruth -- less hands, ____ in blows and cur -- ses, spit and bands?
+  de -- filed by ruth -- less hands, ____ in blows and cur -- ses, spit and bands.
 
   %final stanza
   And I be -- lieve with my whole heart, I be -- lieve, His bo -- dy will rise and re --
@@ -192,7 +192,7 @@ wordsA = \lyricmode {
 wordsB = \lyricmode {
   \set stanza = \markup{\right-align "2."}
   "" Cru -- ci ____ -- fied__in sor -- row great, His truths are posed as crimes of hate. When His com -- mand -- ments none will teach, His blood can -- not His mem -- bers reach. Dis --
-  fig -- ured and of beau -- ty reft, He sees be -- low a rem -- nent left.
+  fig -- ured and of beau -- ty reft, He sees be -- low a rem -- nant left.
   And in His gasp -- ing pleas ____ He entrusts you, faith -- ful Mo -- ther__to these.
 }
 
