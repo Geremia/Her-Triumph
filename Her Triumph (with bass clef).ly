@@ -1,6 +1,6 @@
 % A.M.D.G.
 
-\version "2.24.0"
+\version "2.24.3"
 \language "english"
 
 #(set-default-paper-size "letter")
@@ -54,7 +54,7 @@ upper =	 \relative c'' {
 
   % line 1
   \partial 8 g,8
-  c4 ef8 \noBeam f g [(af g4)]
+  c4 ef8 \noBeam f g (af g4)
   f8 [(ef)] d [(bf)] c4. g8
   bf [c] ef [f] ef [(d8)] c8 [(bf8)]
 
@@ -191,9 +191,9 @@ wordsA = \lyricmode {
 
 wordsB = \lyricmode {
   \set stanza = \markup{\right-align "2."}
-  "" Cru -- ci ____ -- fied__in sor -- row great, His truths are posed as crimes of hate. When His com -- mand -- ments none will teach, His blood can -- not His mem -- bers reach. Dis --
+  "" Cru -- ci ____ -- fied______in sor -- row great, His truths are posed as crimes of hate. When His com -- mand -- ments none will teach, His blood can -- not His mem -- bers reach. Dis --
   fig -- ured and of beau -- ty reft, He sees be -- low a rem -- nant left.
-  And in His gasp -- ing pleas ____ He entrusts you, faith -- ful Mo -- ther__to these.
+  And in His gasp -- ing pleas ____ He entrusts you, faith -- ful Mother to these.
 }
 
 wordsC = \lyricmode {
